@@ -61,7 +61,7 @@ export default function Header() {
 <Link href="/">
 <Image width={327} height={90} className='w-[100px] h-[25px]' src="/logo.png" alt="loading" />
 </Link>
-<Link className='text-white hover:bg-slate-50 hover:text-[#ed017f] hover:h-[100%] hover:pt-[0.5rem] hover:px-[0.5rem]' href="/">Store Locator</Link>
+<Link className='text-white hover:bg-slate-50 transition-all duration-500 hover:text-[#ed017f] hover:h-[100%] hover:pt-[0.5rem] hover:px-[0.5rem]' href="/">Store Locator</Link>
 <Link className='text-white hover:bg-slate-50 hover:text-[#ed017f] hover:h-[100%] hover:pt-[0.5rem] hover:px-[0.5rem]' href="/">Sell On Konga</Link> 
 </div>
 

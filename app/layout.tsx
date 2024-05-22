@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter,Outfit } from "next/font/google";
 import "./globals.css";
 import { relative } from "path";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const outfit = Outfit({ subsets: ["latin"] });
@@ -18,7 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className='relative' >{children}</body>
+      <body className='relative dm' >
+      <Header />
+        {children}
+        <Footer/>
+        </body>
     </html>
   );
 }
