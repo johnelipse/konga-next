@@ -61,8 +61,8 @@ export default function Header() {
 <Link href="/">
 <Image width={327} height={90} className='w-[100px] h-[25px]' src="/logo.png" alt="loading" />
 </Link>
-<Link className='text-white hover:bg-slate-50 transition-all duration-500 hover:text-[#ed017f] hover:h-[100%] hover:pt-[0.5rem] hover:px-[0.5rem]' href="/">Store Locator</Link>
-<Link className='text-white hover:bg-slate-50 hover:text-[#ed017f] hover:h-[100%] hover:pt-[0.5rem] hover:px-[0.5rem]' href="/">Sell On Konga</Link> 
+<Link className='text-white hover:bg-slate-50 transition-all duration-1000 hover:text-[#ed017f] h-[100%] pt-[0.5rem] px-[0.5rem]' href="/">Store Locator</Link>
+<Link className='text-white hover:bg-slate-50 transition-all duration-1000  hover:text-[#ed017f] h-[100%] pt-[0.5rem] px-[0.5rem]' href="/">Sell On Konga</Link> 
 </div>
 
 <div className='flex items-center gap-7'>
@@ -80,11 +80,11 @@ export default function Header() {
   </div>
 
 <div className='flex justify-between py-0.5 px-3 bg-[#94004f] text-white text-[14px] w-[100%]'>
-<Link href="/">  <h5 className='flex items-center hover:bg-white hover:text-black hover:px-2'>All Categories <span><IoMdMenu/></span></h5></Link>
+<Link href="/">  <h5 className='flex items-center hover:bg-white hover:text-black px-2 transition-all duration-1000'>All Categories <span><IoMdMenu/></span></h5></Link>
 {
 categoryData.map((cart,i)=>{
   return(
-    <Link className='hover:bg-white hover:text-black hover:px-2' key={i} href='/'>
+    <Link className='hover:bg-white hover:text-black px-2 transition-all duration-1000' key={i} href='/'>
      {cart.title}
     </Link>
   )
