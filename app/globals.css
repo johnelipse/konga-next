@@ -5,45 +5,47 @@
 /* #app {
     height: 100%;
   } */
- 
+
+.swiper {
+  width: 65%;
+  height: auto;
+}
+@media (max-width: 768px) {
   .swiper {
-    width: 65%;
-    height: auto;
-  }
-  @media(max-width:768px){
-    .swiper {
-      width: 100%;
-      height: 12rem;
-    }
-  }
-  @media(max-width:768px){
-    .under {
-      width: 100%;
-        }
-    .link{
     width: 100%;
-    }
-  .major{
+    height: 12rem;
+  }
+}
+@media (max-width: 768px) {
+  .under {
+    width: 100%;
+  }
+  .link {
+    width: 100%;
+  }
+  .major {
     gap: 0.5rem;
   }
-  }
-  
-  .swiper-slide {
-    width: 100%;
-    height: 100%;
-  
-    /* Center slide text vertically */
-    /* display: flex;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+
+  /* Center slide text vertically */
+  /* display: flex;
     justify-content: center;
     align-items: center; */
-  }
-  
-  .swiper-slide img {
-    /* display: block; */
-    border-radius: 1rem;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+}
 
-  
+.swiper-slide img {
+  /* display: block; */
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.decoration-double {
+  text-decoration: line-through double;
+}
