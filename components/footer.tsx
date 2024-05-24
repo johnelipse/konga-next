@@ -234,7 +234,7 @@ export default function Footer() {
      </div>
         </footer>
         {/* small screen */}
-        <footer className="lg:hidden md:block flex justify-between w-[100%] px-4 py-5 fixed bottom-0">
+        <footer className="lg:hidden md:block flex justify-between z-[1000] bg-white w-[100%] px-4 py-5 fixed bottom-0">
          <button className="flex flex-col items-center">
           <HiHome size={19} />
           <p>Home</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter,Outfit } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { relative } from "path";
 import Header from "@/components/header";
@@ -20,11 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className='relative' >
-      <Header />
+      <body className="relative">
+        <Header />
         {children}
-        <Footer/>
-        </body>
+        <Footer />
+      </body>
     </html>
   );
 }
