@@ -16,20 +16,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { productsData } from "@/products";
 import { stringify } from "querystring";
+import { majorData } from "@/major";
 export default function Page() {
-// function calDiscount(){
-//   productsData.map((productData,i)=>{
-//     const current=productData.current_price;
-//     const initial=productData.initial_price;
-//     const newCurrent=parseInt(current);
-//     const newInitial=parseInt(initial);
-//     const discount=newCurrent-newInitial;
-//     return(discount)
-//   })
-// }
+  const newMajorData = majorData.slice(0, 10);
 
   return (
-       <div>
+    <div>
       <div className="flex justify-between items-center px-4 py-3 font-thin lg:hidden md:block mt-[5.2rem]">
         <button className="flex flex-col items-center text-[13px]">
           <span className="text-[15px]">
@@ -164,49 +156,83 @@ export default function Page() {
           </Link>
         </div>
 
-        <div className="mt-[2rem] grid grid-cols-3 gap-4">
-        {
-          productsData.map((productData,i)=>{
-            const current=productData.current_price;
-            const initial=productData.initial_price;
-            const newCurrent=parseInt(current);
-            const newInitial=parseInt(initial);
-            const discount=newInitial-newCurrent;
-                    return(
-                        <Link
-              className="flex gap-[1.5rem] bg-white   shadow-sm hover:shadow-lg transition-all duration-500 ease-in px-4 py-4 items-center w-[100%]"
-              key={i}
-              href={productData.path}
+        <div className="mt-[2rem] grid lg:grid-cols-3 md:overflow-x-auto  gap-4  ">
+          {productsData.map((productData, i) => {
+            const current = productData.current_price;
+            const initial = productData.initial_price;
+            const newCurrent = parseInt(current);
+            const newInitial = parseInt(initial);
+            const discount = newInitial - newCurrent;
+            return (
+              <Link
+                className="flex gap-[1.5rem] bg-white   shadow-sm hover:shadow-lg transition-all duration-500 ease-in px-4 py-4 items-center w-[100%]"
+                key={i}
+                href={productData.path}
+              >
+                <div>
+                  <img
+                    className="w-[4rem] h-auto"
+                    src={productData.images[0]}
+                    alt="Loading"
+                  />
+                </div>
+
+                <div>
+                  <h3>{productData.title}</h3>
+                  <div className="flex gap-4 items-center mt-1 mb-1">
+                    <h3 className="text-[1.4rem] font-bold">
+                      ₦<span>{productData.current_price}</span>
+                    </h3>
+                    <h4 className="text-[1rem] decoration-double">
+                      ₦<span>{productData.initial_price}</span>
+                    </h4>
+                    <p className="text-[0.8rem] bg-pink-200 text-pink-600 rounded-full px-1">
+                      {productData.discount}
+                    </p>
+                  </div>
+                  <p className="text-green-600 text-[0.9rem]">
+                    You saved ₦<span>{discount}</span>
+                  </p>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+      <div className="py-8 px-4">
+        <h3 className="font-bold text-[22px] border-b-[1px] border-gray-300 pb-[0.5rem] ">
+          Sponsored Products
+        </h3>
+
+        <div className="mt-[3rem] overflow-x-scroll flex gap-5 flex-shrink-0">
+         {
+          newMajorData.map((data,i)=>{
+            return(
+              <Link
+              href="/" key={i}
+              className="flex flex-col gap-[1.5rem] bg-white   shadow-sm hover:shadow-lg transition-all duration-500 ease-in px-4 py-4 items-center w-[27%] mb-5"
             >
               <div>
                 <img
-                  className="w-[4rem] h-auto"
-                  src={productData.images[0]}
+                  className="image"
+                  src={data.image}
                   alt="Loading"
                 />
               </div>
-  
               <div>
-                <h3>{productData.title}</h3>
-                <div className="flex gap-4 items-center mt-1 mb-1">
-                  <h3 className="text-[1.4rem] font-bold">
-                    ₦<span>{productData.current_price}</span>
-                  </h3>
-                  <h4 className="text-[1rem] decoration-double">
-                    ₦<span>{productData.initial_price}</span>
-                  </h4>
-                  <p className="text-[0.8rem] bg-pink-200 text-pink-600 rounded-full px-1">
-                    {productData.discount}
+                <h4 className="mt-1">Fire Max 11 Tablet with 256</h4>
+                <div className="flex justify-between items-center mt-3">
+                  <p className="font-bold text-[19px]">₦359000</p>
+                  <p className="font-thin text-[13px] line-through">₦359000</p>
+                  <p className="text-[0.8rem] bg-pink-200 text-pink-600 rounded-full px-1 py-1">
+                   {data.discount}
                   </p>
                 </div>
-                <p className="text-green-600 text-[0.9rem]">
-                  You saved ₦<span>{discount}</span>
-                </p>
               </div>
             </Link>
             )
           })
-        }
+         }
         </div>
       </div>
     </div>

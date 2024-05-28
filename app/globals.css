@@ -49,3 +49,8 @@
 .decoration-double {
   text-decoration: line-through double;
 }
+.image{
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
