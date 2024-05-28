@@ -50,7 +50,16 @@
   text-decoration: line-through double;
 }
 .image{
-  object-fit: cover;
-  width: 100%;
-  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  object-fit: contain;
+  width: 10rem;
+  height: 5rem;
+}
+@media(max-width:768px){
+  .scrollable{
+    width: 45%;
+  }
 }

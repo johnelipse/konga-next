@@ -209,8 +209,8 @@ export default function Page() {
           newMajorData.map((data,i)=>{
             return(
               <Link
-              href="/" key={i}
-              className="flex flex-col gap-[1.5rem] bg-white   shadow-sm hover:shadow-lg transition-all duration-500 ease-in px-4 py-4 items-center w-[27%] mb-5"
+              href={data.path} key={i}
+              className="flex flex-col flex-shrink-0 gap-[1.5rem] bg-white   shadow-sm hover:shadow-lg transition-all duration-500 ease-in px-4 py-4 items-center w-[15%] mb-5 scrollable"
             >
               <div>
                 <img
@@ -220,13 +220,13 @@ export default function Page() {
                 />
               </div>
               <div>
-                <h4 className="mt-1">Fire Max 11 Tablet with 256</h4>
-                <div className="flex justify-between items-center mt-3">
-                  <p className="font-bold text-[19px]">₦359000</p>
-                  <p className="font-thin text-[13px] line-through">₦359000</p>
-                  <p className="text-[0.8rem] bg-pink-200 text-pink-600 rounded-full px-1 py-1">
-                   {data.discount}
-                  </p>
+                <h4 className="mt-1">{data.title}</h4>
+                <div className="flex gap-9 items-center mt-3">
+                  <p className="font-bold text-[19px]">{data.current}</p>
+                  <p className="font-thin text-[13px] line-through">{data?.initial}</p>
+                  {/* <p className="text-[0.8rem] bg-pink-200 text-pink-600 rounded-full px-1 py-1">
+                   {data?.discount}
+                  </p> */}
                 </div>
               </div>
             </Link>
