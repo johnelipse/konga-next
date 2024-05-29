@@ -1,26 +1,165 @@
 export const categoryData=[
     {
-        "title": "Computers and Accessories"
+        "title": "Computers and Accessories",
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1678695218/contentservice/Computing.jpg_BkFEiIhk2.jpg",
+        "path":[
+            "/"
+        ]
     },
     {
-        "title": "Phone and Tablets"
+        "title": "Phone and Tablets",
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1700483540/contentservice/sams.jpg_BJhA-RuE6.jpg",
+        "path":[
+            "/"
+        ]
     },
     {
-        "title": "Electronics"
+        "title": "Electronics",
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1678695220/contentservice/Electronics.jpg_SkqVj8hk3.jpg",
+        "path":[
+            "/"
+        ]
+    },
+    
+    {
+        "title": "Home and Kitchen",
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1678695218/contentservice/Kitchen.jpg_HJtVsL3y3.jpg",
+        "path":[
+            "/"
+        ]
     },
     {
-        "title": "Konga Fashion"
+        "title": "Konga Fashion",
+        "image":"https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/C/R/199326_1664980696.jpg",
+        "path":[
+            "/"
+        ]
     },
     {
-        "title": "Home and Kitchen"
+        "title": "Baby",
+        "path":[
+            "/"
+        ]        
     },
     {
-        "title": "Baby"
+        "title": "Kids and Toys",
+        "path":[
+            "/"
+        ]
     },
     {
-        "title": "Kids and Toys"
+        "title": "Other Categories",
+      "path":[
+        "/"
+      ]  
+    }
+    ,
+    {
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1700211308/contentservice/Frame%207737.png_HJz_qj4ET.png",
+        "path":[
+            "/"
+        ]
     },
     {
-        "title": "Other Categories"
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1697634819/contentservice/Frame%207725.png_Hyc-qU6ba.png",
+        "path":[
+            "/"
+        ]
+    },
+    {
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1697634916/contentservice/Frame%207726.png_B1iP9UpWT.png",
+        "path":[
+            "/"
+        ]
+    },
+    {
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1697635010/contentservice/Frame%207728.png_HkdTcUTWp.png",
+        "path":[
+            "/"
+        ]
+    },
+    {
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1713174253/contentservice/starlink%20%281%29.png_H1mlPO5gR.png",
+        "path":[
+            "/"
+        ]
+    },
+    {
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1697636495/contentservice/Frame%207729.png_ByU9xPabp.png",
+        "path":[
+            "/"
+        ]
+    },
+    {
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1697635008/contentservice/Frame%207734.png_SyO65LpZp.png",
+        "path":[
+            "/"
+        ]
+    },
+    {
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1697635182/contentservice/Frame%207730.png_SJN_jUTZa.png",
+        "path":[
+            "/"
+        ]
+    },
+    {
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1702389088/contentservice/applecorrected.png_SkLDS1IUa.png",
+        "path":[
+            "/"
+        ]
+    },
+    {
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1697635008/contentservice/Frame%207727.png_HyO6q8Tb6.png",
+        "path":[
+            "/"
+        ]
+    },
+    {
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1697637368/contentservice/Frame%207732.png_B1AxVPaZp.png",
+        "path":[
+            "/"
+        ]
+    },
+    {
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1697635008/contentservice/Frame%207733.png_BJvT9L6WT.png",
+        "path":[
+            "/"
+        ]
+    },
+    {
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1697636495/contentservice/Frame%207735.png_SkL5ew6Z6.png",
+        "path":[
+            "/"
+        ]
+    },
+    {
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1699962951/contentservice/Frame%207739.png_r16Sg1WE6.png",
+        "path":[
+            "/"
+        ]
+    },
+    {
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1699963003/contentservice/Frame%207740.png_Sk7FlJ-46.png",
+        "path":[
+            "/"
+        ]
+    },
+    {
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1699963005/contentservice/image%20133.png_rkQtg1W4p.png",
+        "path":[
+            "/"
+        ]
+    },
+    {
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1699963003/contentservice/image%20135.png_S17Fx1ZEa.png",
+        "path":[
+            "/"
+        ]
+    },
+    {
+        "image":"https://www-konga-com-res.cloudinary.com/image/upload/w_300,f_auto,fl_lossy,dpr_1.0,q_auto/v1699963004/contentservice/image%20137.png_rk7YgybVp.png",
+        "path":[
+            "/"
+        ]
     }
 ]

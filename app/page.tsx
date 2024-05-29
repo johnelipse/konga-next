@@ -17,9 +17,15 @@ import Image from "next/image";
 import { productsData } from "@/products";
 import { stringify } from "querystring";
 import { majorData } from "@/major";
+import Card from "@/components/card";
+import CardItem from "@/components/card";
+import { categoryData } from "@/categories";
 export default function Page() {
   const newMajorData = majorData.slice(0, 10);
-
+  const newCategories=categoryData.slice(0,4)
+  const imageCategories=categoryData.slice(8,26)
+  console .log(imageCategories)
+  
   return (
     <div>
       <div className="flex justify-between items-center px-4 py-3 font-thin lg:hidden md:block mt-[5.2rem]">
@@ -147,10 +153,10 @@ export default function Page() {
 
       <div className="py-8 px-4">
         <div className="bg-[#94004f] text-white flex items-center gap-8 py-1 px-4 rounded-t-lg">
-          <h3 className="text-[2rem]">Today's Deals</h3>
+          <h3 className="lg:text-[2rem] md:text-[19px]">Today's Deals</h3>
           <Link
-            className="border-b-[1px] border-[#94004f]  hover:border-[white] transition-all duration-300 ease-in "
-            href="/"
+            className="border-b-[1px] border-[#94004f] lg:text-[18px]  md:text-[15px] hover:border-[white] transition-all duration-300 ease-in"
+            href="/" 
           >
             See All items
           </Link>
@@ -234,6 +240,112 @@ export default function Page() {
           })
          }
         </div>
+      </div>
+      <div className="py-8 px-4">
+        <div className="flex gap-7 items-center bg-pink-200 px-4 py-2 rounded-t-[0.7rem]">
+        <h3 className="font-bold lg:text-[26px] md:text-[18px]">
+         Same Day Delivery
+        </h3>
+        <Link href="/" className="text-pink-900 text-[0.9rem] border-b-[1px] border-b-pink-200  hover:border-b-pink-900">See all items</Link>
+        </div>
+
+        <div className="overflow-x-scroll">
+      <CardItem/>
+        </div>
+      </div>
+      <div className="px-8 py-8 flex gap-8 justify-center items-center">
+     {
+newCategories.map((newCategory,i)=>{
+  return(
+       <Link key={i} href={newCategory.path[0]}>
+      <div>
+       <Image width={300} height={249} className="category" src={newCategory.image} alt="" /> 
+      </div>
+        </Link>
+  )
+})
+     }
+      </div>
+
+      <div className="px-8">
+      <div className="bg-[#f5a623] px-4 py-1 text-center" >
+        <h3 className="font-normal text-[22px]">
+          Official Store
+        </h3>
+      </div>
+      <div className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-3 gap-4 mt-8">
+{
+  imageCategories.map((imageCategory,i)=>{
+    return(
+      <Link  href={imageCategory.path} key={i}>
+        <Image className="hover:hoverAction" width={300} height={166} src={imageCategory.image} alt="" />
+      </Link>
+    )
+  })
+}
+      </div>
+      </div>
+
+      <div className="py-8 px-4">
+        <h3 className="font-bold text-[22px] border-b-[1px] border-gray-300 pb-[0.5rem] ">
+         Recommended For you
+        </h3>
+
+        <div className="mt-[2rem] grid lg:grid-cols-3 md:overflow-x-auto  gap-4  ">
+          {productsData.map((productData, i) => {
+            const current = productData.current_price;
+            const initial = productData.initial_price;
+            const newCurrent = parseInt(current);
+            const newInitial = parseInt(initial);
+            const discount = newInitial - newCurrent;
+            return (
+              <Link
+                className="flex gap-[1.5rem] bg-white   shadow-sm hover:shadow-lg transition-all duration-500 ease-in px-4 py-4 items-center w-[100%]"
+                key={i}
+                href={productData.path}
+              >
+                <div>
+                  <img
+                    className="w-[4rem] h-auto"
+                    src={productData.images[0]}
+                    alt="Loading"
+                  />
+                </div>
+
+                <div>
+                  <h3>{productData.title}</h3>
+                  <div className="flex gap-4 items-center mt-1 mb-1">
+                    <h3 className="text-[1.4rem] font-bold">
+                      ₦<span>{productData.current_price}</span>
+                    </h3>
+                    <h4 className="text-[1rem] decoration-double">
+                      ₦<span>{productData.initial_price}</span>
+                    </h4>
+                    <p className="text-[0.8rem] bg-pink-200 text-pink-600 rounded-full px-1">
+                      {productData.discount}
+                    </p>
+                  </div>
+                  <p className="text-green-600 text-[0.9rem]">
+                    You saved ₦<span>{discount}</span>
+                  </p>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+
+
+      <div className="py-8 px-4">
+<Link href="/">
+  <Image className="rounded-md" width={4192} height={317} src="/special.jpg" alt="loading" />
+</Link>
+<div className="mt-11">
+<div className="flex items-center  gap-4 flex-shrink-0">
+ <Link href="/" className="w-[49%] "> <Image width={667} height={204} className="w-[100%]  object-cover rounded-md" src="/save.jpg" alt="loading" /></Link>
+  <Link href="/" className="w-[49%] rounded-md"><Image width={667} height={204} className="w-[100%]  object-cover rounded-md" src="/save.jpg" alt="loading" /></Link>
+</div>
+</div>
       </div>
     </div>
   );

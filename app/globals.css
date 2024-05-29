@@ -63,3 +63,17 @@
     width: 45%;
   }
 }
+@media(max-width:768px){
+  .scrollableTwo{
+    width: 55%;
+  }
+}
+.category{
+  object-fit: cover;
+  width: 10.5rem;
+  height: auto;
+}
+.hoverAction{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
