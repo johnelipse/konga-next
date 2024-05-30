@@ -257,7 +257,7 @@ export default function Page() {
         </div>
       </div>
       <div className="px-8 py-8 flex gap-8 justify-center items-center">
-        {newCategories.map((newCategory, i) => {
+        {newCategories.map((newCategory:any, i) => {
           return (
             <Link key={i} href={newCategory.path[0]}>
               <div>
