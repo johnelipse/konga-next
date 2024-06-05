@@ -496,7 +496,7 @@ export default function Page() {
           you can enjoy low shipping rates, discounted prices and flexible
           payment. When you shop on our platform, you can pay with your debit
           card or via KongaPay, which is a convenient and secured payment
-          solution. Get the best of lifestyle services online. Don't miss out on
+          solution. Get the best of lifestyle services online. Do not miss out on
           the biggest sales online which takes place on special dates yearly.
         </p>
       </div>
