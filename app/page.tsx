@@ -154,7 +154,7 @@ export default function Page() {
 
       <div className="py-8 px-4">
         <div className="bg-[#94004f] text-white flex items-center gap-8 py-1 px-4 rounded-t-lg">
-          <h3 className="lg:text-[2rem] md:text-[19px]">Today's Deals</h3>
+          <h3 className="lg:text-[2rem] md:text-[19px]">Todays Deals</h3>
           <Link
             className="border-b-[1px] border-[#94004f] lg:text-[18px]  md:text-[15px] hover:border-[white] transition-all duration-300 ease-in"
             href="/"
@@ -474,7 +474,7 @@ export default function Page() {
           Konga Online Shopping in Nigeria - Best Shopping Site
         </h2>
         <p className="text-gray-500">
-          Konga.com is Nigeria’s number one online Shopping destination.We pride
+          Konga.com is Nigerias number one online Shopping destination.We pride
           ourselves in having everything you could possibly need for life and
           living at the best prices than anywhere else. Our access to Original
           Equipment Manufacturers and premium sellers gives us a wide range of
