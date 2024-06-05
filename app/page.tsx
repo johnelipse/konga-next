@@ -177,8 +177,10 @@ export default function Page() {
                 href={productData.path}
               >
                 <div>
-                  <img
+                  <Image
                     className="w-[4rem] h-auto"
+                     width={300}
+                  height={166}
                     src={productData.images[0]}
                     alt="Loading"
                   />
@@ -220,7 +222,8 @@ export default function Page() {
                 className="flex flex-col flex-shrink-0 gap-[1.5rem] bg-white   shadow-sm hover:shadow-lg transition-all duration-500 ease-in px-4 py-4 items-center w-[15%] mb-5 scrollable"
               >
                 <div>
-                  <img className="image" src={data.image} alt="Loading" />
+                  <Image  className="image"  width={300}
+                  height={166}  src={data.image} alt="Loading" />
                 </div>
                 <div>
                   <h4 className="mt-1">{data.title}</h4>
@@ -284,7 +287,7 @@ export default function Page() {
               <Link href={imageCategory.path} key={i}>
                 <Image
                   className="hover:hoverAction"
-                  width={300}
+                   width={300}
                   height={166}
                   src={imageCategory.image}
                   alt=""
