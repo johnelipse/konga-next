@@ -317,7 +317,9 @@ export default function Page() {
                 href={productData.path}
               >
                 <div>
-                  <img
+                  <Image
+                   width={300}
+                  height={166}
                     className="w-[4rem] h-auto"
                     src={productData.images[0]}
                     alt="Loading"
